@@ -18,11 +18,21 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
     }
-
+    
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func signUpTapped(_ sender: Any) {
+        let signUpViewController = SignUpViewController()
+        self.present(signUpViewController, animated: true)
+    }
+    
 }
 
 extension SignInViewController {
-    func setUpElements() {
+    private func setUpElements() {
         errorLabel.alpha = 0
         SettingsUI.styleFilledButton(signInButton)
     }

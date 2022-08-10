@@ -14,6 +14,7 @@
 		B12D490628A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B12D490428A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld */; };
 		B12D490828A3DE6300D66B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12D490728A3DE6300D66B51 /* Assets.xcassets */; };
 		B1BF5DFB28A3F64C00F5D189 /* SettingsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF5DFA28A3F64C00F5D189 /* SettingsUI.swift */; };
+		B1BF5DFD28A402A800F5D189 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B12D490728A3DE6300D66B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B12D490C28A3DE6300D66B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1BF5DFA28A3F64C00F5D189 /* SettingsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUI.swift; sourceTree = "<group>"; };
+		B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				B12D48FF28A3DE6200D66B51 /* SignInViewController.swift */,
+				B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1BF5DFD28A402A800F5D189 /* SignUpViewController.swift in Sources */,
 				B12D490028A3DE6200D66B51 /* SignInViewController.swift in Sources */,
 				B12D48FC28A3DE6200D66B51 /* AppDelegate.swift in Sources */,
 				B12D490628A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld in Sources */,
