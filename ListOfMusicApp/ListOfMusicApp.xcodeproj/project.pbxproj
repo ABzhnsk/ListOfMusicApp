@@ -9,22 +9,20 @@
 /* Begin PBXBuildFile section */
 		B12D48FC28A3DE6200D66B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12D48FB28A3DE6200D66B51 /* AppDelegate.swift */; };
 		B12D48FE28A3DE6200D66B51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12D48FD28A3DE6200D66B51 /* SceneDelegate.swift */; };
-		B12D490028A3DE6200D66B51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12D48FF28A3DE6200D66B51 /* ViewController.swift */; };
+		B12D490028A3DE6200D66B51 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12D48FF28A3DE6200D66B51 /* SignInViewController.swift */; };
 		B12D490328A3DE6200D66B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12D490128A3DE6200D66B51 /* Main.storyboard */; };
 		B12D490628A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B12D490428A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld */; };
 		B12D490828A3DE6300D66B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12D490728A3DE6300D66B51 /* Assets.xcassets */; };
-		B12D490B28A3DE6300D66B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12D490928A3DE6300D66B51 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B12D48F828A3DE6200D66B51 /* ListOfMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListOfMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12D48FB28A3DE6200D66B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B12D48FD28A3DE6200D66B51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B12D48FF28A3DE6200D66B51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B12D48FF28A3DE6200D66B51 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B12D490228A3DE6200D66B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B12D490528A3DE6200D66B51 /* ListOfMusicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListOfMusicApp.xcdatamodel; sourceTree = "<group>"; };
 		B12D490728A3DE6300D66B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B12D490A28A3DE6300D66B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B12D490C28A3DE6300D66B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,14 +58,21 @@
 			children = (
 				B12D48FB28A3DE6200D66B51 /* AppDelegate.swift */,
 				B12D48FD28A3DE6200D66B51 /* SceneDelegate.swift */,
-				B12D48FF28A3DE6200D66B51 /* ViewController.swift */,
+				B12D491428A3DFF300D66B51 /* View */,
 				B12D490128A3DE6200D66B51 /* Main.storyboard */,
 				B12D490728A3DE6300D66B51 /* Assets.xcassets */,
-				B12D490928A3DE6300D66B51 /* LaunchScreen.storyboard */,
 				B12D490C28A3DE6300D66B51 /* Info.plist */,
 				B12D490428A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld */,
 			);
 			path = ListOfMusicApp;
+			sourceTree = "<group>";
+		};
+		B12D491428A3DFF300D66B51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B12D48FF28A3DE6200D66B51 /* SignInViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +133,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B12D490B28A3DE6300D66B51 /* LaunchScreen.storyboard in Resources */,
 				B12D490828A3DE6300D66B51 /* Assets.xcassets in Resources */,
 				B12D490328A3DE6200D66B51 /* Main.storyboard in Resources */,
 			);
@@ -141,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B12D490028A3DE6200D66B51 /* ViewController.swift in Sources */,
+				B12D490028A3DE6200D66B51 /* SignInViewController.swift in Sources */,
 				B12D48FC28A3DE6200D66B51 /* AppDelegate.swift in Sources */,
 				B12D490628A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld in Sources */,
 				B12D48FE28A3DE6200D66B51 /* SceneDelegate.swift in Sources */,
@@ -157,14 +161,6 @@
 				B12D490228A3DE6200D66B51 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B12D490928A3DE6300D66B51 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B12D490A28A3DE6300D66B51 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -220,7 +216,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
