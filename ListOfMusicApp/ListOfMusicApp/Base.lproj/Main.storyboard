@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="-6" width="414" height="908"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-pW-KdN">
-                                        <rect key="frame" x="0.0" y="-6" width="414" height="655"/>
+                                        <rect key="frame" x="0.0" y="126.5" width="414" height="655"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-bX-Ogf">
-                                                <rect key="frame" x="70" y="334.5" width="274" height="200.5"/>
+                                                <rect key="frame" x="70" y="227.5" width="274" height="200.5"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b20-oy-q5w">
                                                         <rect key="frame" x="0.0" y="0.0" width="274" height="40"/>
@@ -60,7 +60,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIE-t6-Uxu">
-                                                <rect key="frame" x="168" y="278.5" width="78" height="36"/>
+                                                <rect key="frame" x="168" y="171.5" width="78" height="36"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -69,8 +69,8 @@
                                         <color key="backgroundColor" red="1" green="0.64290291127251842" blue="0.46622481417273853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="nVa-bX-Ogf" firstAttribute="leading" secondItem="ywi-pW-KdN" secondAttribute="leading" constant="70" id="8Jc-jm-o3I"/>
+                                            <constraint firstItem="nVa-bX-Ogf" firstAttribute="centerY" secondItem="ywi-pW-KdN" secondAttribute="centerY" id="GlN-b7-RS0"/>
                                             <constraint firstItem="nVa-bX-Ogf" firstAttribute="top" secondItem="iIE-t6-Uxu" secondAttribute="bottom" constant="20" id="Im6-65-jc6"/>
-                                            <constraint firstAttribute="bottom" secondItem="nVa-bX-Ogf" secondAttribute="bottom" constant="120" id="VKS-Be-Z0n"/>
                                             <constraint firstAttribute="trailing" secondItem="nVa-bX-Ogf" secondAttribute="trailing" constant="70" id="jJe-ng-zbN"/>
                                             <constraint firstItem="iIE-t6-Uxu" firstAttribute="centerX" secondItem="ywi-pW-KdN" secondAttribute="centerX" id="l5P-ZZ-dY9"/>
                                             <constraint firstAttribute="height" constant="655" id="mZi-0Q-mIh"/>
@@ -88,9 +88,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.64290291129999999" blue="0.4662248142" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="F3u-8u-UXo" firstAttribute="top" secondItem="ywi-pW-KdN" secondAttribute="top" constant="6" id="7SR-fF-eCS"/>
                                     <constraint firstItem="ywi-pW-KdN" firstAttribute="width" secondItem="l0h-xT-0Mu" secondAttribute="width" id="Bol-8d-IJm"/>
                                     <constraint firstItem="ywi-pW-KdN" firstAttribute="bottom" secondItem="F3u-8u-UXo" secondAttribute="bottom" id="CvC-tN-tDh"/>
+                                    <constraint firstItem="ywi-pW-KdN" firstAttribute="centerY" secondItem="l0h-xT-0Mu" secondAttribute="centerY" id="E2m-kB-cNw"/>
                                     <constraint firstItem="ywi-pW-KdN" firstAttribute="trailing" secondItem="F3u-8u-UXo" secondAttribute="trailing" id="MAy-53-jSZ"/>
                                     <constraint firstItem="l0h-xT-0Mu" firstAttribute="trailing" secondItem="aLb-jc-aun" secondAttribute="trailing" constant="20" id="fiT-H1-UlT"/>
                                     <constraint firstItem="l0h-xT-0Mu" firstAttribute="bottom" secondItem="aLb-jc-aun" secondAttribute="bottom" constant="50" id="hW5-Pi-Nqj"/>
