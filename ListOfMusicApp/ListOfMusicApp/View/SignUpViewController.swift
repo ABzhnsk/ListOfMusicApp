@@ -36,14 +36,7 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private let firstNameValidLabel: UILabel = {
-        let label = UILabel()
-        label.alpha = 0
-        label.textColor = UIColor.requiredColor
-        label.text = "Required"
-        label.font = UIFont.systemFont(ofSize: 12)
-        return label
-    }()
+    private let firstNameValidLabel = UILabel()
     
     private let lastNameTextField: UITextField = {
         let textField = UITextField()
@@ -51,14 +44,7 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private let lastNameValidLabel: UILabel = {
-        let label = UILabel()
-        label.alpha = 0
-        label.textColor = UIColor.requiredColor
-        label.text = "Required"
-        label.font = UIFont.systemFont(ofSize: 12)
-        return label
-    }()
+    private let lastNameValidLabel = UILabel()
     
     private let birthdayLabel: UILabel = {
         let label = UILabel()
@@ -68,14 +54,7 @@ class SignUpViewController: UIViewController {
         return label
     }()
     
-    private let ageValidLabel: UILabel = {
-        let label = UILabel()
-        label.alpha = 0
-        label.textColor = UIColor.requiredColor
-        label.text = "Required"
-        label.font = UIFont.systemFont(ofSize: 12)
-        return label
-    }()
+    private let ageValidLabel = UILabel()
     
     private let phoneNumberTextField: UITextField = {
         let textField = UITextField()
@@ -84,14 +63,7 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private let phoneValidLabel: UILabel = {
-        let label = UILabel()
-        label.alpha = 0
-        label.textColor = UIColor.requiredColor
-        label.text = "Required"
-        label.font = UIFont.systemFont(ofSize: 12)
-        return label
-    }()
+    private let phoneValidLabel = UILabel()
     
     private let emailTextField: UITextField = {
         let textField = UITextField()
@@ -99,14 +71,7 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private let emailValidLabel: UILabel = {
-        let label = UILabel()
-        label.alpha = 0
-        label.textColor = UIColor.requiredColor
-        label.text = "Required"
-        label.font = UIFont.systemFont(ofSize: 12)
-        return label
-    }()
+    private let emailValidLabel = UILabel()
     
     private let passwordTextField: UITextField = {
         let textField = UITextField()
@@ -115,14 +80,7 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private let passwordValidLabel: UILabel = {
-        let label = UILabel()
-        label.alpha = 0
-        label.textColor = UIColor.requiredColor
-        label.text = "Required"
-        label.font = UIFont.systemFont(ofSize: 12)
-        return label
-    }()
+    private let passwordValidLabel = UILabel()
     
     private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
@@ -173,11 +131,19 @@ extension SignUpViewController {
         elementsStackView.axis = .vertical
         elementsStackView.spacing = 10
         elementsStackView.distribution = .fillProportionally
-        SettingsUI.styleTextField(firstNameTextField)
-        SettingsUI.styleTextField(lastNameTextField)
-        SettingsUI.styleTextField(phoneNumberTextField)
-        SettingsUI.styleTextField(emailTextField)
-        SettingsUI.styleTextField(passwordTextField)
+        SettingsUI.styleTextField([firstNameTextField,
+                                   lastNameTextField,
+                                   phoneNumberTextField,
+                                   emailTextField,
+                                   passwordTextField
+                                  ])
+        SettingsUI.styleValidLabel([firstNameValidLabel,
+                                    lastNameValidLabel,
+                                    ageValidLabel,
+                                    phoneValidLabel,
+                                    emailValidLabel,
+                                    passwordValidLabel
+                                   ])
         backgroundView.addSubview(elementsStackView)
         backgroundView.addSubview(signUpLabel)
         SettingsUI.styleFilledButton(signUpButton)

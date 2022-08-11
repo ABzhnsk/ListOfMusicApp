@@ -15,10 +15,21 @@ class SettingsUI {
         button.tintColor = UIColor.white
     }
     
-    static func styleTextField(_ textField: UITextField) {
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.purpureColor.cgColor
-        textField.borderStyle = .roundedRect
+    static func styleTextField(_ textField: [UITextField]) {
+        for textField in textField {
+            textField.layer.borderWidth = 1
+            textField.layer.cornerRadius = 5
+            textField.layer.borderColor = UIColor.purpureColor.cgColor
+            textField.borderStyle = .roundedRect
+        }
+    }
+    
+    static func styleValidLabel(_ label: [UILabel]) {
+        for label in label {
+            label.alpha = 0
+            label.textColor = UIColor.requiredColor
+            label.text = "Required"
+            label.font = UIFont.systemFont(ofSize: 12)
+        }
     }
 }
