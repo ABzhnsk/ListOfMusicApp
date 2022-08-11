@@ -13,6 +13,7 @@
 		B12D490328A3DE6200D66B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12D490128A3DE6200D66B51 /* Main.storyboard */; };
 		B12D490628A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B12D490428A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld */; };
 		B12D490828A3DE6300D66B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12D490728A3DE6300D66B51 /* Assets.xcassets */; };
+		B131B3F528A4F04000936E58 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B131B3F428A4F04000936E58 /* UIColor+Extension.swift */; };
 		B1BF5DFB28A3F64C00F5D189 /* SettingsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF5DFA28A3F64C00F5D189 /* SettingsUI.swift */; };
 		B1BF5DFD28A402A800F5D189 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */; };
 		DD0173646EE8F60E6BA115A0 /* Pods_ListOfMusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FBF070A1B836AB9A2E8275 /* Pods_ListOfMusicApp.framework */; };
@@ -29,6 +30,7 @@
 		B12D490528A3DE6200D66B51 /* ListOfMusicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListOfMusicApp.xcdatamodel; sourceTree = "<group>"; };
 		B12D490728A3DE6300D66B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B12D490C28A3DE6300D66B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B131B3F428A4F04000936E58 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B1BF5DFA28A3F64C00F5D189 /* SettingsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUI.swift; sourceTree = "<group>"; };
 		B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CA9310609D07B9921A3EA9A1 /* Pods-ListOfMusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListOfMusicApp.debug.xcconfig"; path = "Target Support Files/Pods-ListOfMusicApp/Pods-ListOfMusicApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,7 +54,6 @@
 				CA9310609D07B9921A3EA9A1 /* Pods-ListOfMusicApp.debug.xcconfig */,
 				7AA04A23161038B0B92021D3 /* Pods-ListOfMusicApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B1BF5DF828A3F61400F5D189 /* App */,
+				B131B3F328A4EFEA00936E58 /* Extensions */,
 				B1BF5DF928A3F62300F5D189 /* Helpers */,
 				B12D491428A3DFF300D66B51 /* View */,
 				B12D490128A3DE6200D66B51 /* Main.storyboard */,
@@ -103,6 +105,14 @@
 				B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B131B3F328A4EFEA00936E58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B131B3F428A4F04000936E58 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B1BF5DF828A3F61400F5D189 /* App */ = {
@@ -236,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B131B3F528A4F04000936E58 /* UIColor+Extension.swift in Sources */,
 				B1BF5DFD28A402A800F5D189 /* SignUpViewController.swift in Sources */,
 				B12D490028A3DE6200D66B51 /* SignInViewController.swift in Sources */,
 				B12D48FC28A3DE6200D66B51 /* AppDelegate.swift in Sources */,

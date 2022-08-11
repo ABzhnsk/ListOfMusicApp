@@ -18,56 +18,67 @@ class SignUpViewController: UIViewController {
     
     private let backgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 255/255, green: 158/255, blue: 109/255, alpha: 1)
+        view.backgroundColor = .white
         return view
     }()
     
     private let signUpLabel: UILabel = {
         let label = UILabel()
         label.text = "Registration"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textColor = UIColor.purpureColor
+        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         return label
     }()
     
     private let firstNameTextField: UITextField = {
         let textField = UITextField()
-        textField.borderStyle = .roundedRect
         textField.placeholder = "First Name"
         return textField
     }()
     
     private let firstNameValidLabel: UILabel = {
         let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.alpha = 0
+        label.textColor = UIColor.requiredColor
+        label.text = "Required"
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     
     private let lastNameTextField: UITextField = {
         let textField = UITextField()
-        textField.borderStyle = .roundedRect
         textField.placeholder = "Last Name"
         return textField
     }()
     
     private let lastNameValidLabel: UILabel = {
         let label = UILabel()
-        label.text = "Required field"
+        label.alpha = 0
+        label.textColor = UIColor.requiredColor
+        label.text = "Required"
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
+    private let birthdayLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "Birthday"
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     
     private let ageValidLabel: UILabel = {
         let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.alpha = 0
+        label.textColor = UIColor.requiredColor
+        label.text = "Required"
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     
     private let phoneNumberTextField: UITextField = {
         let textField = UITextField()
-        textField.borderStyle = .roundedRect
         textField.placeholder = "Phone"
         textField.keyboardType = .numberPad
         return textField
@@ -75,28 +86,30 @@ class SignUpViewController: UIViewController {
     
     private let phoneValidLabel: UILabel = {
         let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.alpha = 0
+        label.textColor = UIColor.requiredColor
+        label.text = "Required"
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     
     private let emailTextField: UITextField = {
         let textField = UITextField()
-        textField.borderStyle = .roundedRect
         textField.placeholder = "Email"
         return textField
     }()
     
     private let emailValidLabel: UILabel = {
         let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.alpha = 0
+        label.textColor = UIColor.requiredColor
+        label.text = "Required"
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     
     private let passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.borderStyle = .roundedRect
         textField.isSecureTextEntry = true
         textField.placeholder = "Password"
         return textField
@@ -104,8 +117,10 @@ class SignUpViewController: UIViewController {
     
     private let passwordValidLabel: UILabel = {
         let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.alpha = 0
+        label.textColor = UIColor.requiredColor
+        label.text = "Required"
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     
@@ -118,50 +133,51 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
+    private let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.backgroundColor = .white
+        datePicker.tintColor = .black
+        return datePicker
+    }()
+    
     private var elementsStackView = UIStackView()
-    private let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
         setConstraint()
         setUpDelegate()
-        setupDataPicker()
     }
     
 }
 
-extension SignUpViewController {
-    private func setupDataPicker() {
-        datePicker.datePickerMode = .date
-        datePicker.backgroundColor = .white
-        datePicker.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
-        datePicker.layer.borderWidth = 1
-        datePicker.clipsToBounds = true
-        datePicker.layer.cornerRadius = 6
-        datePicker.tintColor = .black
-    }
-    
+extension SignUpViewController {    
     private func setUpViews() {
-        title = "Registration"
         view.addSubview(scrollView)
         scrollView.addSubview(backgroundView)
-        elementsStackView = UIStackView(arrangedSubviews: [firstNameValidLabel,
-                                                           firstNameTextField,
-                                                           lastNameValidLabel,
+        elementsStackView = UIStackView(arrangedSubviews: [firstNameTextField,
+                                                           firstNameValidLabel,
                                                            lastNameTextField,
-                                                           ageValidLabel,
+                                                           lastNameValidLabel,
+                                                           birthdayLabel,
                                                            datePicker,
-                                                           phoneValidLabel,
+                                                           ageValidLabel,
                                                            phoneNumberTextField,
-                                                           emailValidLabel,
+                                                           phoneValidLabel,
                                                            emailTextField,
-                                                           passwordValidLabel,
-                                                           passwordTextField
+                                                           emailValidLabel,
+                                                           passwordTextField,
+                                                           passwordValidLabel
                                                           ])
         elementsStackView.axis = .vertical
         elementsStackView.spacing = 10
         elementsStackView.distribution = .fillProportionally
+        SettingsUI.styleTextField(firstNameTextField)
+        SettingsUI.styleTextField(lastNameTextField)
+        SettingsUI.styleTextField(phoneNumberTextField)
+        SettingsUI.styleTextField(emailTextField)
+        SettingsUI.styleTextField(passwordTextField)
         backgroundView.addSubview(elementsStackView)
         backgroundView.addSubview(signUpLabel)
         SettingsUI.styleFilledButton(signUpButton)
@@ -174,16 +190,17 @@ extension SignUpViewController {
         }
         backgroundView.snp.makeConstraints { make in
             make.centerY.centerX.equalTo(scrollView)
-            make.height.equalTo(view)
+            make.height.equalTo(view.snp.height)
             make.width.equalTo(view)
         }
         elementsStackView.snp.makeConstraints { make in
-            make.centerX.centerY.equalTo(backgroundView)
-            make.leading.trailing.equalTo(backgroundView).inset(20)
+            make.centerY.centerX.equalTo(backgroundView)
+            make.top.equalTo(signUpLabel).inset(60)
+            make.leading.trailing.equalTo(view).inset(20)
         }
         signUpLabel.snp.makeConstraints { make in
             make.centerX.equalTo(backgroundView)
-            make.top.equalTo(elementsStackView).offset(-30)
+            make.topMargin.equalTo(backgroundView).offset(20)
         }
         signUpButton.snp.makeConstraints { make in
             make.centerX.equalTo(backgroundView)
@@ -191,7 +208,6 @@ extension SignUpViewController {
             make.height.equalTo(40)
             make.width.equalTo(200)
         }
-        
     }
     
 }

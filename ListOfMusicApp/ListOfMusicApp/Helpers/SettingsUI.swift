@@ -14,4 +14,11 @@ class SettingsUI {
         button.layer.cornerRadius = 20.0
         button.tintColor = UIColor.white
     }
+    
+    static func styleTextField(_ textField: UITextField) {
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 5
+        textField.layer.borderColor = UIColor.purpureColor.cgColor
+        textField.borderStyle = .roundedRect
+    }
 }
