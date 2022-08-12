@@ -106,8 +106,12 @@ class SignUpViewController: UIViewController {
         setUpViews()
         setConstraint()
         setUpDelegate()
+        addObserverKeyboard()
     }
     
+    deinit {
+        removeObserverKeyboard()
+    }
 }
 
 extension SignUpViewController {    
@@ -160,7 +164,6 @@ extension SignUpViewController {
             make.width.equalTo(view)
         }
         elementsStackView.snp.makeConstraints { make in
-            make.centerY.centerX.equalTo(backgroundView)
             make.top.equalTo(signUpLabel).inset(60)
             make.leading.trailing.equalTo(view).inset(20)
         }
@@ -170,10 +173,43 @@ extension SignUpViewController {
         }
         signUpButton.snp.makeConstraints { make in
             make.centerX.equalTo(backgroundView)
-            make.bottom.equalTo(elementsStackView).offset(60)
+            make.bottom.equalTo(passwordValidLabel.snp.bottom).offset(40)
             make.height.equalTo(40)
             make.width.equalTo(200)
         }
+    }
+    
+    
+    private func addObserverKeyboard() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+    
+    private func removeObserverKeyboard() {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillShowNotification,
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillHideNotification,
+                                                  object: nil)
+    }
+    
+    @objc private func keyboardWillShow(notification: Notification) {
+        let userInfo = notification.userInfo
+        let keyboardHeight = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
+        scrollView.contentOffset = CGPoint(x: 0, y: keyboardHeight / 2)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: scrollView.frame.height + 250)
+    }
+    
+    @objc private func keyboardWillHide(notification: Notification) {
+        scrollView.contentOffset = CGPoint.zero
     }
     
 }

@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivs-Al-11i">
-                                <rect key="frame" x="0.0" y="-6" width="414" height="908"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="918"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-pW-KdN">
-                                        <rect key="frame" x="0.0" y="126.5" width="414" height="655"/>
+                                        <rect key="frame" x="0.0" y="137.5" width="414" height="642.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-bX-Ogf">
-                                                <rect key="frame" x="70" y="227.5" width="274" height="200.5"/>
+                                                <rect key="frame" x="70" y="221" width="274" height="200.5"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b20-oy-q5w">
                                                         <rect key="frame" x="0.0" y="0.0" width="274" height="40"/>
@@ -60,7 +60,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIE-t6-Uxu">
-                                                <rect key="frame" x="168" y="171.5" width="78" height="36"/>
+                                                <rect key="frame" x="168" y="165" width="78" height="36"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -73,11 +73,10 @@
                                             <constraint firstItem="nVa-bX-Ogf" firstAttribute="top" secondItem="iIE-t6-Uxu" secondAttribute="bottom" constant="20" id="Im6-65-jc6"/>
                                             <constraint firstAttribute="trailing" secondItem="nVa-bX-Ogf" secondAttribute="trailing" constant="70" id="jJe-ng-zbN"/>
                                             <constraint firstItem="iIE-t6-Uxu" firstAttribute="centerX" secondItem="ywi-pW-KdN" secondAttribute="centerX" id="l5P-ZZ-dY9"/>
-                                            <constraint firstAttribute="height" constant="655" id="mZi-0Q-mIh"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLb-jc-aun">
-                                        <rect key="frame" x="20" y="827" width="374" height="31"/>
+                                        <rect key="frame" x="20" y="837" width="374" height="31"/>
                                         <color key="tintColor" red="0.40000000000000002" green="0.078431372549019607" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Don't have an account?"/>
@@ -89,9 +88,10 @@
                                 <color key="backgroundColor" red="1" green="0.64290291129999999" blue="0.4662248142" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="ywi-pW-KdN" firstAttribute="width" secondItem="l0h-xT-0Mu" secondAttribute="width" id="Bol-8d-IJm"/>
-                                    <constraint firstItem="ywi-pW-KdN" firstAttribute="bottom" secondItem="F3u-8u-UXo" secondAttribute="bottom" id="CvC-tN-tDh"/>
-                                    <constraint firstItem="ywi-pW-KdN" firstAttribute="centerY" secondItem="l0h-xT-0Mu" secondAttribute="centerY" id="E2m-kB-cNw"/>
+                                    <constraint firstItem="ywi-pW-KdN" firstAttribute="bottom" secondItem="F3u-8u-UXo" secondAttribute="bottom" constant="50" id="CvC-tN-tDh"/>
+                                    <constraint firstItem="ywi-pW-KdN" firstAttribute="height" secondItem="l0h-xT-0Mu" secondAttribute="height" multiplier="0.7" id="Deh-bQ-aOf"/>
                                     <constraint firstItem="ywi-pW-KdN" firstAttribute="trailing" secondItem="F3u-8u-UXo" secondAttribute="trailing" id="MAy-53-jSZ"/>
+                                    <constraint firstItem="ywi-pW-KdN" firstAttribute="top" secondItem="ivs-Al-11i" secondAttribute="top" constant="137.5" id="a9N-Q0-qUW"/>
                                     <constraint firstItem="l0h-xT-0Mu" firstAttribute="trailing" secondItem="aLb-jc-aun" secondAttribute="trailing" constant="20" id="fiT-H1-UlT"/>
                                     <constraint firstItem="l0h-xT-0Mu" firstAttribute="bottom" secondItem="aLb-jc-aun" secondAttribute="bottom" constant="50" id="hW5-Pi-Nqj"/>
                                     <constraint firstItem="ywi-pW-KdN" firstAttribute="leading" secondItem="F3u-8u-UXo" secondAttribute="leading" id="k2v-z3-78Q"/>
@@ -106,7 +106,7 @@
                         <constraints>
                             <constraint firstItem="ivs-Al-11i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1d1-zp-RrG"/>
                             <constraint firstItem="ivs-Al-11i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="40" id="bME-4F-pCT"/>
-                            <constraint firstItem="ivs-Al-11i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-50" id="ihl-59-7bQ"/>
+                            <constraint firstItem="ivs-Al-11i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-60" id="ihl-59-7bQ"/>
                             <constraint firstItem="ivs-Al-11i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pIi-Bx-5Yo"/>
                         </constraints>
                     </view>
@@ -114,6 +114,7 @@
                         <outlet property="emailTextField" destination="b20-oy-q5w" id="XIX-dw-cNr"/>
                         <outlet property="errorLabel" destination="TFf-AA-qFs" id="G2H-4d-OpF"/>
                         <outlet property="passwordTextField" destination="PxF-uT-6Lr" id="gM2-hj-b4T"/>
+                        <outlet property="scrollView" destination="ivs-Al-11i" id="DZV-1g-BUa"/>
                         <outlet property="signInButton" destination="gU7-Je-XpU" id="ZOt-5b-iQi"/>
                     </connections>
                 </viewController>
