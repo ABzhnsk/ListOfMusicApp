@@ -174,7 +174,7 @@ extension SignUpViewController {
         }
         signUpButton.snp.makeConstraints { make in
             make.centerX.equalTo(backgroundView)
-            make.bottom.equalTo(passwordValidLabel.snp.bottom).offset(40)
+            make.bottom.equalTo(passwordValidLabel).offset(70)
             make.height.equalTo(40)
             make.width.equalTo(200)
         }
@@ -227,7 +227,35 @@ extension SignUpViewController {
 
 extension SignUpViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
+        switch textField {
+        case firstNameTextField: setTextField(textField: firstNameTextField,
+                                              label: firstNameValidLabel,
+                                              validType: String.ValidTypes.name,
+                                              wrongMessage: "Required. Only A-Z characters",
+                                              string: string,
+                                              range: range)
+        case lastNameTextField: setTextField(textField: lastNameTextField,
+                                              label: lastNameValidLabel,
+                                              validType: String.ValidTypes.name,
+                                              wrongMessage: "Required. Only A-Z characters",
+                                              string: string,
+                                              range: range)
+        case emailTextField: setTextField(textField: emailTextField,
+                                          label: emailValidLabel,
+                                          validType: String.ValidTypes.email,
+                                          wrongMessage: "Email is not valid",
+                                          string: string,
+                                          range: range)
+        case passwordTextField: setTextField(textField: passwordTextField,
+                                          label: passwordValidLabel,
+                                          validType: String.ValidTypes.password,
+                                          wrongMessage: "Min: 6 char, 1 upper and lower case, 1 num char",
+                                          string: string,
+                                          range: range)
+        default:
+            break
+        }
+        
         return false
     }
     
@@ -246,4 +274,30 @@ extension SignUpViewController: UITextFieldDelegate {
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
+    
+    private func setTextField(textField: UITextField, label: UILabel, validType: String.ValidTypes, wrongMessage: String, string: String, range: NSRange) {
+        
+        let text = (textField.text ?? "") + string
+        let result: String
+        
+        if range.length == 1 {
+            let end = text.index(text.startIndex, offsetBy: text.count - 1)
+            result = String(text[text.startIndex..<end])
+        } else {
+            result = text
+        }
+        
+        textField.text = result
+        
+        if result.isValid(type: validType) {
+            textField.layer.borderColor = UIColor.green.cgColor
+            label.alpha = 0
+            label.text = ""
+        } else {
+            textField.layer.borderColor = UIColor.red.cgColor
+            label.text = wrongMessage
+            label.alpha = 1
+        }
+    }
+    
 }

@@ -28,7 +28,6 @@ class SettingsUI {
         for label in label {
             label.alpha = 0
             label.textColor = UIColor.requiredColor
-            label.text = "Required"
             label.font = UIFont.systemFont(ofSize: 12)
         }
     }
