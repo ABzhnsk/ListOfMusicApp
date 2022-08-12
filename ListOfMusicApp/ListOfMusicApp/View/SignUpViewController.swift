@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class SignUpViewController: UIViewController {
-    
+    //MARK: - Private property for UI
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = .white
@@ -101,6 +101,7 @@ class SignUpViewController: UIViewController {
     
     private var elementsStackView = UIStackView()
     
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
@@ -115,7 +116,8 @@ class SignUpViewController: UIViewController {
     }
 }
 
-extension SignUpViewController {    
+extension SignUpViewController {
+    //MARK: - Set up UI elements
     private func setUpViews() {
         view.addSubview(scrollView)
         scrollView.addSubview(backgroundView)
@@ -155,6 +157,7 @@ extension SignUpViewController {
         backgroundView.addSubview(signUpButton)
     }
     
+    //MARK: - Set up constraints for UI elements
     private func setConstraint() {
         scrollView.snp.makeConstraints { make in
             make.leading.trailing.top.bottom.equalTo(view)
@@ -180,6 +183,7 @@ extension SignUpViewController {
         }
     }
     
+    //MARK: - Add UIRecognizer and Observer
     private func addTapRecognizer() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTap))
         self.view.addGestureRecognizer(tapRecognizer)
@@ -226,6 +230,8 @@ extension SignUpViewController {
 }
 
 extension SignUpViewController: UITextFieldDelegate {
+    
+    //MARK: - Check change characters for UITextField
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
         case firstNameTextField: setTextField(textField: firstNameTextField,
@@ -235,11 +241,11 @@ extension SignUpViewController: UITextFieldDelegate {
                                               string: string,
                                               range: range)
         case lastNameTextField: setTextField(textField: lastNameTextField,
-                                              label: lastNameValidLabel,
-                                              validType: String.ValidTypes.name,
-                                              wrongMessage: "Required. Only A-Z characters",
-                                              string: string,
-                                              range: range)
+                                             label: lastNameValidLabel,
+                                             validType: String.ValidTypes.name,
+                                             wrongMessage: "Required. Only A-Z characters",
+                                             string: string,
+                                             range: range)
         case emailTextField: setTextField(textField: emailTextField,
                                           label: emailValidLabel,
                                           validType: String.ValidTypes.email,
@@ -247,11 +253,17 @@ extension SignUpViewController: UITextFieldDelegate {
                                           string: string,
                                           range: range)
         case passwordTextField: setTextField(textField: passwordTextField,
-                                          label: passwordValidLabel,
-                                          validType: String.ValidTypes.password,
-                                          wrongMessage: "Min: 6 char, 1 upper and lower case, 1 num char",
-                                          string: string,
-                                          range: range)
+                                             label: passwordValidLabel,
+                                             validType: String.ValidTypes.password,
+                                             wrongMessage: "Min: 6 char, 1 upper and lower case, 1 num char",
+                                             string: string,
+                                             range: range)
+        case phoneNumberTextField:
+            phoneNumberTextField.text = setPhoneNumberMask(mask: "+X (XXX) XXX-XX-XX",
+                                                           string: string,
+                                                           range: range)
+            
+            
         default:
             break
         }
@@ -259,6 +271,7 @@ extension SignUpViewController: UITextFieldDelegate {
         return false
     }
     
+    // MARK: - Check resign first responder for UITextField
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         firstNameTextField.resignFirstResponder()
         lastNameTextField.resignFirstResponder()
@@ -267,6 +280,7 @@ extension SignUpViewController: UITextFieldDelegate {
         return true
     }
     
+    // MARK: - Set delegate for UITextField
     private func setUpDelegate() {
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
@@ -275,6 +289,7 @@ extension SignUpViewController: UITextFieldDelegate {
         passwordTextField.delegate = self
     }
     
+    //MARK: - Settings for UITextField
     private func setTextField(textField: UITextField, label: UILabel, validType: String.ValidTypes, wrongMessage: String, string: String, range: NSRange) {
         
         let text = (textField.text ?? "") + string
@@ -298,6 +313,47 @@ extension SignUpViewController: UITextFieldDelegate {
             label.text = wrongMessage
             label.alpha = 1
         }
+    }
+    
+    //MARK: - Settings for phone number text field
+    private func setPhoneNumberMask(mask: String, string: String, range: NSRange) -> String {
+        let text = phoneNumberTextField.text ?? ""
+        let phone = (text as NSString).replacingCharacters(in: range, with: string)
+        let number = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        var result = ""
+        var index = number.startIndex
+        
+        for char in mask where index < number.endIndex {
+            if char == "X" {
+                result.append(number[index])
+                index = number.index(after: index)
+            } else {
+                result.append(char)
+            }
+        }
+        
+        if result.isValid(type: String.ValidTypes.phone) {
+            phoneNumberTextField.layer.borderColor = UIColor.green.cgColor
+            phoneValidLabel.alpha = 0
+            phoneValidLabel.text = ""
+        } else {
+            phoneNumberTextField.layer.borderColor = UIColor.red.cgColor
+            phoneValidLabel.text = "Phone number shoud be +7 (XXX) XXX-XX-XX"
+            phoneValidLabel.alpha = 1
+        }
+        
+        return result
+    }
+    
+    //MARK: - Check age
+    private func isAgeValid() -> Bool {
+        let calendar = NSCalendar.current
+        let dateNow = Date()
+        let birthday = datePicker.date
+        let age = calendar.dateComponents([.year], from: birthday, to: dateNow)
+        let ageYear = age.year
+        guard let userAge = ageYear else { return false }
+        return (userAge < 18 ? false : true)
     }
     
 }

@@ -9,12 +9,14 @@ import UIKit
 
 class SignInViewController: UIViewController {
     
+    //MARK: - Outlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
@@ -22,7 +24,7 @@ class SignInViewController: UIViewController {
         addTapRecognizer()
     }
     
-    
+    //MARK: - IBActions
     @IBAction func signInTapped(_ sender: Any) {
         
     }
@@ -32,17 +34,21 @@ class SignInViewController: UIViewController {
         self.present(signUpViewController, animated: true)
     }
     
+    //MARK: - deinit
     deinit {
         removeObserverKeyboard()
     }
 }
 
 extension SignInViewController {
+    
+    //MARK: - Set up UI elements
     private func setUpElements() {
         errorLabel.alpha = 0
         SettingsUI.styleFilledButton(signInButton)
     }
     
+    //MARK: - Add UIRecognizer and Observer
     private func addTapRecognizer() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTap))
         self.view.addGestureRecognizer(tapRecognizer)
