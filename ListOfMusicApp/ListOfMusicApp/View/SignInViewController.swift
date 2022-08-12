@@ -19,6 +19,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
         addObserverKeyboard()
+        addTapRecognizer()
     }
     
     
@@ -42,6 +43,13 @@ extension SignInViewController {
         SettingsUI.styleFilledButton(signInButton)
     }
     
+    private func addTapRecognizer() {
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTap))
+        self.view.addGestureRecognizer(tapRecognizer)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
     private func addObserverKeyboard() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow),
@@ -61,6 +69,10 @@ extension SignInViewController {
         NotificationCenter.default.removeObserver(self,
                                                   name: UIResponder.keyboardWillHideNotification,
                                                   object: nil)
+    }
+    
+    @objc private func onTap() {
+        self.view.endEditing(true)
     }
     
     @objc private func keyboardWillShow(notification: Notification) {
