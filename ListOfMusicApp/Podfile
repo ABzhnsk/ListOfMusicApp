@@ -7,5 +7,7 @@ target 'ListOfMusicApp' do
 
   # Pods for ListOfMusicApp
 pod 'SnapKit'
-
+pod 'FirebaseAuth'
+pod 'Firebase'
+pod 'PromisesSwift'
 end

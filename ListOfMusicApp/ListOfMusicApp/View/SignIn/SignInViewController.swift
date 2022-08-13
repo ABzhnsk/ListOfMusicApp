@@ -8,6 +8,7 @@
 import UIKit
 
 class SignInViewController: UIViewController {
+    var presenter: SignInPresenter!
     
     //MARK: - Outlets
     @IBOutlet weak var scrollView: UIScrollView!
@@ -22,11 +23,14 @@ class SignInViewController: UIViewController {
         setUpElements()
         addObserverKeyboard()
         addTapRecognizer()
+        
+        presenter = SignInPresenter(view: self, auth: Authentication())
+        presenter.show()
     }
     
     //MARK: - IBActions
     @IBAction func signInTapped(_ sender: Any) {
-        
+        presenter.tapSignInButton()
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
@@ -89,5 +93,31 @@ extension SignInViewController {
     
     @objc private func keyboardWillHide(notification: Notification) {
         scrollView.contentOffset = CGPoint.zero
+    }
+}
+
+// MARK: - SignIn logic
+extension SignInViewController: SignInViewProtocol {
+    var email: String {
+        get { return emailTextField.text ?? "" }
+        set { emailTextField.text = newValue}
+    }
+    
+    var password: String {
+        get { return passwordTextField.text ?? "" }
+        set { passwordTextField.text = newValue }
+    }
+    
+    func move(to: SignInViewNavigation) {
+        switch to {
+        case .music:
+            print("Переход к экрану с музыкой")
+        }
+    }
+    
+    func showSignInError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel))
+        self.present(alert, animated: true)
     }
 }
