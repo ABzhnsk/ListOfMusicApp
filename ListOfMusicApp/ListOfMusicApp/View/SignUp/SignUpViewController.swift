@@ -394,70 +394,54 @@ extension SignUpViewController: SignUpViewProtocol {
     
     //MARK: - Protocol's properties
     var firstName: String {
-        get {
-            return firstNameTextField.text ?? ""
-        }
-        set {
-            firstNameTextField.text = newValue
-        }
+        get { return firstNameTextField.text ?? "" }
+        set { firstNameTextField.text = newValue }
     }
     
     var lastName: String {
-        get {
-            return lastNameTextField.text ?? ""
-        }
-        set {
-            lastNameTextField.text = newValue
-        }
+        get { return lastNameTextField.text ?? "" }
+        set { lastNameTextField.text = newValue }
     }
     
     var phoneNumber: String {
-        get {
-            return phoneNumberTextField.text ?? ""
-        }
-        set {
-            phoneNumberTextField.text = newValue
-        }
+        get { return phoneNumberTextField.text ?? "" }
+        set { phoneNumberTextField.text = newValue }
     }
     
-    var age: Date {
-        return datePicker.date
-    }
+    var age: Date { return datePicker.date }
     
     var email: String {
-        get {
-            return emailTextField.text ?? ""
-        }
-        set {
-            emailTextField.text = newValue
-        }
+        get { return emailTextField.text ?? "" }
+        set { emailTextField.text = newValue }
     }
     
     var password: String {
-        get {
-            return passwordTextField.text ?? ""
-        }
-        set {
-            passwordTextField.text = newValue
-        }
+        get { return passwordTextField.text ?? "" }
+        set { passwordTextField.text = newValue }
     }
     
     //MARK: - Create alerts
     func showSuccessDialog() {
-        let alert = UIAlertController(title: "Успешно", message: "вы зареганы", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel))
-        self.present(alert, animated: true)
+        AlertBuilder()
+            .title("Success")
+            .message("You are sign up")
+            .action("OK")
+            .show(self, animated: true)
     }
     
     func showSignUpError(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel))
-        self.present(alert, animated: true)
+        AlertBuilder()
+            .title("Error")
+            .message(message)
+            .action("OK")
+            .show(self, animated: true)
     }
     
     private func showTextFieldError() {
-        let alert = UIAlertController(title: "Error", message: "All fields are required", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel))
-        self.present(alert, animated: true)
+        AlertBuilder()
+            .title("Error")
+            .message("All fields are required")
+            .action("OK")
+            .show(self, animated: true)
     }
 }

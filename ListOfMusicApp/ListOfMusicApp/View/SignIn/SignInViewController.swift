@@ -114,8 +114,10 @@ extension SignInViewController: SignInViewProtocol {
     }
     
     func showSignInError(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel))
-        self.present(alert, animated: true)
+        AlertBuilder()
+            .title("Error")
+            .message(message)
+            .action("OK")
+            .show(self, animated: true)
     }
 }

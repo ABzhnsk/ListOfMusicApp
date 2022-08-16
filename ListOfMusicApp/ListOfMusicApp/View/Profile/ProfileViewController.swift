@@ -18,6 +18,12 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavbar()
+    }
+}
 
+extension ProfileViewController {
+    private func setNavbar() {
+        self.navigationItem.title = "Profile"
     }
 }

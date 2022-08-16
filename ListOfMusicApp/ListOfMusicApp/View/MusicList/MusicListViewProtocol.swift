@@ -10,9 +10,10 @@ import Foundation
 enum MusicListViewNavigation {
     case exit
     case profile
-    case details
+//    case details
 }
 
 protocol MusicListViewProtocol {
     func move(to: MusicListViewNavigation)
+    func showLogoutErrorDialog(message: String)
 }
