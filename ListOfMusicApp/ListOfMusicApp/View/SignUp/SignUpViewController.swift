@@ -377,7 +377,15 @@ extension SignUpViewController: UITextFieldDelegate {
         let age = calendar.dateComponents([.year], from: birthday, to: dateNow)
         let ageYear = age.year
         guard let userAge = ageYear else { return false }
-        return (userAge < 18 ? false : true)
+        if userAge < 18 {
+            ageValidLabel.text = "Are you under 18"
+            ageValidLabel.alpha = 1
+            return false
+        } else {
+            ageValidLabel.text = ""
+            ageValidLabel.alpha = 0
+            return true
+        }
     }
     
 }
