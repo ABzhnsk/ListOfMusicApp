@@ -109,7 +109,7 @@ extension SignInViewController: SignInViewProtocol {
     func move(to: SignInViewNavigation) {
         switch to {
         case .music:
-            print("Переход к экрану с музыкой")
+            performSegue(withIdentifier: "toMusicList", sender: nil)
         }
     }
     

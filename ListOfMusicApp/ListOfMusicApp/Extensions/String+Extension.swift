@@ -1,5 +1,5 @@
 //
-//  String + Extension.swift
+//  String+Extension.swift
 //  ListOfMusicApp
 //
 //  Created by Anna Buzhinskaya on 12.08.2022.
