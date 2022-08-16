@@ -15,7 +15,6 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
     
     //MARK: - Override methods
     override func viewDidLoad() {
@@ -48,7 +47,6 @@ extension SignInViewController {
     
     //MARK: - Set up UI elements
     private func setUpElements() {
-        errorLabel.alpha = 0
         SettingsUI.styleFilledButton(signInButton)
     }
     

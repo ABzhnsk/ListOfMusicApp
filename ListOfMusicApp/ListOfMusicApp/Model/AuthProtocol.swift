@@ -10,6 +10,6 @@ import Promises
 
 protocol AuthProtocol {
     func isLogin() -> Bool
-    func signIn(email: String, password: String) -> Promise<User>
-    func signUp(firstName: String, lastName: String, age: String, phoneNumber: String, email: String, password: String) -> Promise<User>
+    func signIn(email: String, password: String) -> Promise<UserAuth>
+    func signUp(email: String, password: String) -> Promise<UserAuth>
 }

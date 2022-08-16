@@ -9,6 +9,8 @@ import UIKit
 import SnapKit
 
 class SignUpViewController: UIViewController {
+    var presenter: SignUpPresenter!
+    
     //MARK: - Private property for UI
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -84,10 +86,8 @@ class SignUpViewController: UIViewController {
     
     private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .black
         button.setTitle("Sign Up", for: .normal)
-        button.tintColor = .white
-        button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(tapSignUp(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -109,14 +109,18 @@ class SignUpViewController: UIViewController {
         setUpDelegate()
         addObserverKeyboard()
         addTapRecognizer()
+        
+        presenter = SignUpPresenter(view: self, auth: Authentication(), database: Database())
     }
     
+    //MARK: - Deinit
     deinit {
         removeObserverKeyboard()
     }
 }
 
 extension SignUpViewController {
+    
     //MARK: - Set up UI elements
     private func setUpViews() {
         view.addSubview(scrollView)
@@ -160,16 +164,16 @@ extension SignUpViewController {
     //MARK: - Set up constraints for UI elements
     private func setConstraint() {
         scrollView.snp.makeConstraints { make in
-            make.leading.trailing.top.bottom.equalTo(view)
+            make.leading.trailing.top.bottom.equalTo(self.view)
         }
         backgroundView.snp.makeConstraints { make in
             make.centerY.centerX.equalTo(scrollView)
-            make.height.equalTo(view.snp.height)
-            make.width.equalTo(view)
+            make.height.equalTo(self.view.snp.height)
+            make.width.equalTo(self.view)
         }
         elementsStackView.snp.makeConstraints { make in
             make.top.equalTo(signUpLabel).inset(60)
-            make.leading.trailing.equalTo(view).inset(20)
+            make.leading.trailing.equalTo(self.view).inset(20)
         }
         signUpLabel.snp.makeConstraints { make in
             make.centerX.equalTo(backgroundView)
@@ -177,7 +181,7 @@ extension SignUpViewController {
         }
         signUpButton.snp.makeConstraints { make in
             make.centerX.equalTo(backgroundView)
-            make.bottom.equalTo(passwordValidLabel).offset(70)
+            make.bottom.equalTo(elementsStackView).offset(70)
             make.height.equalTo(40)
             make.width.equalTo(200)
         }
@@ -212,6 +216,7 @@ extension SignUpViewController {
                                                   object: nil)
     }
     
+    //MARK: - Objc func
     @objc private func onTap() {
         self.view.endEditing(true)
     }
@@ -227,6 +232,25 @@ extension SignUpViewController {
         scrollView.contentOffset = CGPoint.zero
     }
     
+    @objc func tapSignUp(_ sender: UIButton) {
+        let firstNameText = firstNameTextField.text ?? ""
+        let lastNameText = lastNameTextField.text ?? ""
+        let phoneText = phoneNumberTextField.text ?? ""
+        let emailText = emailTextField.text ?? ""
+        let passwordText = passwordTextField.text ?? ""
+        
+        if firstNameText.isValid(type: .name) &&
+            lastNameText.isValid(type: .name) &&
+            phoneText.isValid(type: .phone) &&
+            emailText.isValid(type: .email) &&
+            passwordText.isValid(type: .password) &&
+            isAgeValid() == true
+        {
+            presenter.tapSignUpButton()
+        } else {
+            showTextFieldError()
+        }
+    }
 }
 
 extension SignUpViewController: UITextFieldDelegate {
@@ -356,4 +380,76 @@ extension SignUpViewController: UITextFieldDelegate {
         return (userAge < 18 ? false : true)
     }
     
+}
+
+extension SignUpViewController: SignUpViewProtocol {
+    
+    //MARK: - Protocol's properties
+    var firstName: String {
+        get {
+            return firstNameTextField.text ?? ""
+        }
+        set {
+            firstNameTextField.text = newValue
+        }
+    }
+    
+    var lastName: String {
+        get {
+            return lastNameTextField.text ?? ""
+        }
+        set {
+            lastNameTextField.text = newValue
+        }
+    }
+    
+    var phoneNumber: String {
+        get {
+            return phoneNumberTextField.text ?? ""
+        }
+        set {
+            phoneNumberTextField.text = newValue
+        }
+    }
+    
+    var age: Date {
+        return datePicker.date
+    }
+    
+    var email: String {
+        get {
+            return emailTextField.text ?? ""
+        }
+        set {
+            emailTextField.text = newValue
+        }
+    }
+    
+    var password: String {
+        get {
+            return passwordTextField.text ?? ""
+        }
+        set {
+            passwordTextField.text = newValue
+        }
+    }
+    
+    //MARK: - Create alerts
+    func showSuccessDialog() {
+        let alert = UIAlertController(title: "Успешно", message: "вы зареганы", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel))
+        self.present(alert, animated: true)
+    }
+    
+    func showSignUpError(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel))
+        self.present(alert, animated: true)
+    }
+    
+    private func showTextFieldError() {
+        let alert = UIAlertController(title: "Error", message: "All fields are required", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel))
+        self.present(alert, animated: true)
+    }
 }

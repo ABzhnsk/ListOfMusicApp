@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="137.5" width="414" height="642.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-bX-Ogf">
-                                                <rect key="frame" x="70" y="221" width="274" height="200.5"/>
+                                                <rect key="frame" x="70" y="241.5" width="274" height="160"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b20-oy-q5w">
                                                         <rect key="frame" x="0.0" y="0.0" width="274" height="40"/>
@@ -46,12 +46,6 @@
                                                             <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySy-MZ-x64"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFf-AA-qFs">
-                                                        <rect key="frame" x="0.0" y="180" width="274" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.37959674869999999" green="0.078496928889999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -60,7 +54,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIE-t6-Uxu">
-                                                <rect key="frame" x="168" y="165" width="78" height="36"/>
+                                                <rect key="frame" x="168" y="185.5" width="78" height="36"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -112,7 +106,6 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="b20-oy-q5w" id="XIX-dw-cNr"/>
-                        <outlet property="errorLabel" destination="TFf-AA-qFs" id="G2H-4d-OpF"/>
                         <outlet property="passwordTextField" destination="PxF-uT-6Lr" id="gM2-hj-b4T"/>
                         <outlet property="scrollView" destination="ivs-Al-11i" id="DZV-1g-BUa"/>
                         <outlet property="signInButton" destination="gU7-Je-XpU" id="ZOt-5b-iQi"/>
