@@ -10,32 +10,23 @@ import Foundation
 class SignUpPresenter {
     var view: SignUpViewProtocol
     let auth: AuthProtocol
-    let database: DatabaseProtocol
+    let store = DataStoreManager()
     
-    init(view: SignUpViewProtocol, auth: AuthProtocol, database: DatabaseProtocol) {
+    init(view: SignUpViewProtocol, auth: AuthProtocol) {
         self.view = view
         self.auth = auth
-        self.database = database
     }
     
     func tapSignUpButton() {
-        auth.signUp(email: view.email, password: view.password).then { [weak self] _ in
-            guard let firstName = self?.view.firstName,
-                  let lastName = self?.view.lastName,
-                  let phoneNumber = self?.view.phoneNumber,
-                  let age = self?.view.age,
-                  let email = self?.view.email,
-                  let password = self?.view.password
+        guard let userEmail = view.user.email,
+              let userPassword = view.user.password
+        else { return }
+        
+        auth.signUp(email: userEmail, password: userPassword).then { [weak self] _ in
+            guard let user = self?.view.user
             else { return }
             self?.view.showSuccessDialog()
-            guard let user = self?.database.add(UserData.self) else { return }
-            user.firstName = firstName
-            user.lastName = lastName
-            user.phoneNumber = phoneNumber
-            user.age = age
-            user.email = email
-            user.password = password
-            self?.database.save()
+            self?.store.saveUser(user)
         }.catch { error in
             self.view.showSignUpError(message: error.localizedDescription)
         }

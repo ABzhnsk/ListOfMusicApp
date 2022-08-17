@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/ABzhnsk/Desktop/Interview/Omega/ListOfMusicApp/ListOfMusicApp/ListOfMusicApp/Model/UserData+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/ABzhnsk/Desktop/Interview/Omega/ListOfMusicApp/ListOfMusicApp/ListOfMusicApp/Model/UserData+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:ListOfMusicApp.xcodeproj">
    </FileRef>
    <FileRef

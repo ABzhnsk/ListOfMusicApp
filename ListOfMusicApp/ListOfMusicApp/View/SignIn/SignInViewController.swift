@@ -45,7 +45,7 @@ class SignInViewController: UIViewController {
 
 extension SignInViewController {
     
-    //MARK: - Set up UI elements
+    //MARK: - Setup UI elements
     private func setUpElements() {
         SettingsUI.styleFilledButton(signInButton)
     }

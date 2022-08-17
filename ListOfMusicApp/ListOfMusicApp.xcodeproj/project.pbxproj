@@ -10,8 +10,6 @@
 		B117FB6D28ABE0E700DF8D51 /* MusicListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117FB6C28ABE0E700DF8D51 /* MusicListViewProtocol.swift */; };
 		B117FB6F28ABE0F800DF8D51 /* MusicListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117FB6E28ABE0F800DF8D51 /* MusicListPresenter.swift */; };
 		B117FB7228ABE8CF00DF8D51 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117FB7128ABE8CF00DF8D51 /* ProfileViewController.swift */; };
-		B117FB7428ABE8E300DF8D51 /* ProfileViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117FB7328ABE8E300DF8D51 /* ProfileViewProtocol.swift */; };
-		B117FB7628ABE90100DF8D51 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117FB7528ABE90100DF8D51 /* ProfilePresenter.swift */; };
 		B117FB7928ABEB3F00DF8D51 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117FB7828ABEB3F00DF8D51 /* DetailsViewController.swift */; };
 		B117FB7B28ABEB6B00DF8D51 /* DetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117FB7A28ABEB6B00DF8D51 /* DetailsViewProtocol.swift */; };
 		B117FB7D28ABEB7C00DF8D51 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B117FB7C28ABEB7C00DF8D51 /* DetailsPresenter.swift */; };
@@ -26,11 +24,13 @@
 		B144EE0828ABA71A00D1602D /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B144EE0728ABA71A00D1602D /* MusicListViewController.swift */; };
 		B144EE0A28ABA8A900D1602D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B144EE0928ABA8A900D1602D /* UIImage+Extension.swift */; };
 		B151C01728A921AC0003F299 /* SignUpViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B151C01628A921AC0003F299 /* SignUpViewProtocol.swift */; };
-		B151C01928A924F80003F299 /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B151C01828A924F80003F299 /* DatabaseProtocol.swift */; };
 		B151C01B28A9280E0003F299 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B151C01A28A9280E0003F299 /* SignUpPresenter.swift */; };
-		B151C01D28A92D3F0003F299 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B151C01C28A92D3F0003F299 /* UserData.swift */; };
 		B15248D328A64D0D004518BD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15248D228A64D0D004518BD /* String+Extension.swift */; };
-		B157367128AA66EF0029A710 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157367028AA66EF0029A710 /* Database.swift */; };
+		B16E9FAE28ACE13F00A331C8 /* DataStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FAD28ACE13F00A331C8 /* DataStoreManager.swift */; };
+		B16E9FB528ACE41D00A331C8 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FB328ACE41D00A331C8 /* UserData+CoreDataClass.swift */; };
+		B16E9FB628ACE41D00A331C8 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FB428ACE41D00A331C8 /* UserData+CoreDataProperties.swift */; };
+		B16E9FB828ACE5F000A331C8 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FB728ACE5F000A331C8 /* UserDataModel.swift */; };
+		B16E9FBA28ACFB0800A331C8 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FB928ACFB0800A331C8 /* DateFormatter+.swift */; };
 		B1BCC82428A7FFCE0054E61A /* SignInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCC82328A7FFCE0054E61A /* SignInViewProtocol.swift */; };
 		B1BCC82628A800B60054E61A /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCC82528A800B60054E61A /* SignInPresenter.swift */; };
 		B1BCC82828A8016A0054E61A /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCC82728A8016A0054E61A /* AuthProtocol.swift */; };
@@ -48,8 +48,6 @@
 		B117FB6C28ABE0E700DF8D51 /* MusicListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewProtocol.swift; sourceTree = "<group>"; };
 		B117FB6E28ABE0F800DF8D51 /* MusicListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListPresenter.swift; sourceTree = "<group>"; };
 		B117FB7128ABE8CF00DF8D51 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B117FB7328ABE8E300DF8D51 /* ProfileViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocol.swift; sourceTree = "<group>"; };
-		B117FB7528ABE90100DF8D51 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		B117FB7828ABEB3F00DF8D51 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B117FB7A28ABEB6B00DF8D51 /* DetailsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewProtocol.swift; sourceTree = "<group>"; };
 		B117FB7C28ABEB7C00DF8D51 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
@@ -66,11 +64,13 @@
 		B144EE0728ABA71A00D1602D /* MusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
 		B144EE0928ABA8A900D1602D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		B151C01628A921AC0003F299 /* SignUpViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewProtocol.swift; sourceTree = "<group>"; };
-		B151C01828A924F80003F299 /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
 		B151C01A28A9280E0003F299 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
-		B151C01C28A92D3F0003F299 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B15248D228A64D0D004518BD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		B157367028AA66EF0029A710 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		B16E9FAD28ACE13F00A331C8 /* DataStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreManager.swift; sourceTree = "<group>"; };
+		B16E9FB328ACE41D00A331C8 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserData+CoreDataClass.swift"; path = "/Users/ABzhnsk/Desktop/Interview/Omega/ListOfMusicApp/ListOfMusicApp/ListOfMusicApp/Model/UserData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		B16E9FB428ACE41D00A331C8 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserData+CoreDataProperties.swift"; path = "/Users/ABzhnsk/Desktop/Interview/Omega/ListOfMusicApp/ListOfMusicApp/ListOfMusicApp/Model/UserData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		B16E9FB728ACE5F000A331C8 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		B16E9FB928ACFB0800A331C8 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		B1BCC82328A7FFCE0054E61A /* SignInViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewProtocol.swift; sourceTree = "<group>"; };
 		B1BCC82528A800B60054E61A /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		B1BCC82728A8016A0054E61A /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
@@ -115,8 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				B117FB7128ABE8CF00DF8D51 /* ProfileViewController.swift */,
-				B117FB7328ABE8E300DF8D51 /* ProfileViewProtocol.swift */,
-				B117FB7528ABE90100DF8D51 /* ProfilePresenter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -184,6 +182,7 @@
 				B131B3F428A4F04000936E58 /* UIColor+Extension.swift */,
 				B15248D228A64D0D004518BD /* String+Extension.swift */,
 				B144EE0928ABA8A900D1602D /* UIImage+Extension.swift */,
+				B16E9FB928ACFB0800A331C8 /* DateFormatter+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -239,12 +238,13 @@
 		B1CBD6D528A6A3E500A2EFF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B151C01C28A92D3F0003F299 /* UserData.swift */,
+				B16E9FB328ACE41D00A331C8 /* UserData+CoreDataClass.swift */,
+				B16E9FB428ACE41D00A331C8 /* UserData+CoreDataProperties.swift */,
 				B1CBD6D628A6A3FE00A2EFF6 /* UserAuth.swift */,
 				B1BCC82728A8016A0054E61A /* AuthProtocol.swift */,
 				B1BCC82928A802730054E61A /* Authentication.swift */,
-				B151C01828A924F80003F299 /* DatabaseProtocol.swift */,
-				B157367028AA66EF0029A710 /* Database.swift */,
+				B16E9FAD28ACE13F00A331C8 /* DataStoreManager.swift */,
+				B16E9FB728ACE5F000A331C8 /* UserDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -366,31 +366,31 @@
 			files = (
 				B131B3F528A4F04000936E58 /* UIColor+Extension.swift in Sources */,
 				B1BCC82828A8016A0054E61A /* AuthProtocol.swift in Sources */,
-				B117FB7428ABE8E300DF8D51 /* ProfileViewProtocol.swift in Sources */,
 				B117FB7D28ABEB7C00DF8D51 /* DetailsPresenter.swift in Sources */,
 				B1BF5DFD28A402A800F5D189 /* SignUpViewController.swift in Sources */,
+				B16E9FB628ACE41D00A331C8 /* UserData+CoreDataProperties.swift in Sources */,
 				B1BCC82428A7FFCE0054E61A /* SignInViewProtocol.swift in Sources */,
 				B1BCC82A28A802730054E61A /* Authentication.swift in Sources */,
-				B151C01928A924F80003F299 /* DatabaseProtocol.swift in Sources */,
-				B157367128AA66EF0029A710 /* Database.swift in Sources */,
 				B144EE0A28ABA8A900D1602D /* UIImage+Extension.swift in Sources */,
 				B1BCC82628A800B60054E61A /* SignInPresenter.swift in Sources */,
 				B15248D328A64D0D004518BD /* String+Extension.swift in Sources */,
 				B117FB7928ABEB3F00DF8D51 /* DetailsViewController.swift in Sources */,
+				B16E9FB828ACE5F000A331C8 /* UserDataModel.swift in Sources */,
+				B16E9FAE28ACE13F00A331C8 /* DataStoreManager.swift in Sources */,
 				B117FB6D28ABE0E700DF8D51 /* MusicListViewProtocol.swift in Sources */,
 				B12D490028A3DE6200D66B51 /* SignInViewController.swift in Sources */,
 				B151C01728A921AC0003F299 /* SignUpViewProtocol.swift in Sources */,
 				B144EE0828ABA71A00D1602D /* MusicListViewController.swift in Sources */,
+				B16E9FBA28ACFB0800A331C8 /* DateFormatter+.swift in Sources */,
 				B12D48FC28A3DE6200D66B51 /* AppDelegate.swift in Sources */,
 				B117FB7228ABE8CF00DF8D51 /* ProfileViewController.swift in Sources */,
 				B1CBD6D728A6A3FE00A2EFF6 /* UserAuth.swift in Sources */,
 				B117FB7B28ABEB6B00DF8D51 /* DetailsViewProtocol.swift in Sources */,
 				B117FB7F28ABFECD00DF8D51 /* AlertBuilder.swift in Sources */,
-				B117FB7628ABE90100DF8D51 /* ProfilePresenter.swift in Sources */,
 				B12D490628A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld in Sources */,
 				B1BF5DFB28A3F64C00F5D189 /* SettingsUI.swift in Sources */,
+				B16E9FB528ACE41D00A331C8 /* UserData+CoreDataClass.swift in Sources */,
 				B151C01B28A9280E0003F299 /* SignUpPresenter.swift in Sources */,
-				B151C01D28A92D3F0003F299 /* UserData.swift in Sources */,
 				B117FB6F28ABE0F800DF8D51 /* MusicListPresenter.swift in Sources */,
 				B12D48FE28A3DE6200D66B51 /* SceneDelegate.swift in Sources */,
 			);

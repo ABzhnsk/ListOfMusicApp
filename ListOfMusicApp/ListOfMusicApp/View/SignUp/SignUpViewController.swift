@@ -69,6 +69,7 @@ class SignUpViewController: UIViewController {
     
     private let emailTextField: UITextField = {
         let textField = UITextField()
+        textField.textContentType = .emailAddress
         textField.placeholder = "Email"
         return textField
     }()
@@ -110,7 +111,7 @@ class SignUpViewController: UIViewController {
         addObserverKeyboard()
         addTapRecognizer()
         
-        presenter = SignUpPresenter(view: self, auth: Authentication(), database: Database())
+        presenter = SignUpPresenter(view: self, auth: Authentication())
     }
     
     //MARK: - Deinit
@@ -391,33 +392,20 @@ extension SignUpViewController: UITextFieldDelegate {
 }
 
 extension SignUpViewController: SignUpViewProtocol {
-    
-    //MARK: - Protocol's properties
-    var firstName: String {
-        get { return firstNameTextField.text ?? "" }
-        set { firstNameTextField.text = newValue }
+    func addUserData() -> UserDataModel {
+        var user = UserDataModel()
+        user.firstName = firstNameTextField.text
+        user.lastName = lastNameTextField.text
+        user.age = datePicker.date
+        user.phoneNumber = phoneNumberTextField.text
+        user.email = emailTextField.text
+        user.password = passwordTextField.text
+        return user
     }
     
-    var lastName: String {
-        get { return lastNameTextField.text ?? "" }
-        set { lastNameTextField.text = newValue }
-    }
-    
-    var phoneNumber: String {
-        get { return phoneNumberTextField.text ?? "" }
-        set { phoneNumberTextField.text = newValue }
-    }
-    
-    var age: Date { return datePicker.date }
-    
-    var email: String {
-        get { return emailTextField.text ?? "" }
-        set { emailTextField.text = newValue }
-    }
-    
-    var password: String {
-        get { return passwordTextField.text ?? "" }
-        set { passwordTextField.text = newValue }
+    var user: UserDataModel {
+        get { return addUserData() }
+        set { }
     }
     
     //MARK: - Create alerts
