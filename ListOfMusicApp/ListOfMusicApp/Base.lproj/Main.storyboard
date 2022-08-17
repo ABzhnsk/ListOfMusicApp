@@ -205,7 +205,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Music list" id="HCV-jZ-xy5"/>
                     <connections>
+                        <outlet property="searchBar" destination="1xv-oq-uw0" id="BCe-iO-kqX"/>
                         <outlet property="tableView" destination="QSR-jI-61E" id="YFG-hO-nS4"/>
+                        <segue destination="MAU-Dm-ZbO" kind="presentation" identifier="toDetails" modalPresentationStyle="fullScreen" id="KGV-wg-uY1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSu-Pg-vRy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
