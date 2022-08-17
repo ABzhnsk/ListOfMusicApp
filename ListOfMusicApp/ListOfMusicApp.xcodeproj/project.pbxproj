@@ -40,6 +40,7 @@
 		B1BF5DFB28A3F64C00F5D189 /* SettingsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF5DFA28A3F64C00F5D189 /* SettingsUI.swift */; };
 		B1BF5DFD28A402A800F5D189 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */; };
 		B1CBD6D728A6A3FE00A2EFF6 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CBD6D628A6A3FE00A2EFF6 /* UserAuth.swift */; };
+		B1F2552528AD7E1200D343B9 /* SongsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2552428AD7E1200D343B9 /* SongsModel.swift */; };
 		DD0173646EE8F60E6BA115A0 /* Pods_ListOfMusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FBF070A1B836AB9A2E8275 /* Pods_ListOfMusicApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		B1BF5DFA28A3F64C00F5D189 /* SettingsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUI.swift; sourceTree = "<group>"; };
 		B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B1CBD6D628A6A3FE00A2EFF6 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		B1F2552428AD7E1200D343B9 /* SongsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsModel.swift; sourceTree = "<group>"; };
 		CA9310609D07B9921A3EA9A1 /* Pods-ListOfMusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListOfMusicApp.debug.xcconfig"; path = "Target Support Files/Pods-ListOfMusicApp/Pods-ListOfMusicApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,6 +290,7 @@
 				B1CBD6D628A6A3FE00A2EFF6 /* UserAuth.swift */,
 				B16E9FB728ACE5F000A331C8 /* UserDataModel.swift */,
 				B137B87B28AD05AD00813D49 /* AlbumModel.swift */,
+				B1F2552428AD7E1200D343B9 /* SongsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				B117FB7228ABE8CF00DF8D51 /* ProfileViewController.swift in Sources */,
 				B1CBD6D728A6A3FE00A2EFF6 /* UserAuth.swift in Sources */,
 				B117FB7F28ABFECD00DF8D51 /* AlertBuilder.swift in Sources */,
+				B1F2552528AD7E1200D343B9 /* SongsModel.swift in Sources */,
 				B12D490628A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld in Sources */,
 				B1BF5DFB28A3F64C00F5D189 /* SettingsUI.swift in Sources */,
 				B16E9FB528ACE41D00A331C8 /* UserData+CoreDataClass.swift in Sources */,

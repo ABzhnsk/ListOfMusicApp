@@ -110,7 +110,10 @@ extension MusicListViewController: MusicListViewProtocol {
             let profileVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
             self.navigationController?.pushViewController(profileVC!, animated: true)
         case .details(let album):
-            performSegue(withIdentifier: "toDetails", sender: album)
+            let detailsVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
+            detailsVC?.albums = album
+            detailsVC?.title = "Details"
+            self.navigationController?.pushViewController(detailsVC!, animated: true)
         case .exit:
             dismiss(animated: true, completion: nil)
         }
