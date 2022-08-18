@@ -25,7 +25,6 @@ extension String {
     func isValid(type: ValidTypes) -> Bool {
         let format = "SELF MATCHES %@"
         var regex = ""
-        
         switch type {
         case .name:
             regex = Regex.name.rawValue
@@ -36,7 +35,6 @@ extension String {
         case .phone:
             regex = Regex.phone.rawValue
         }
-        
         return NSPredicate(format: format, regex).evaluate(with: self)
     }
 }

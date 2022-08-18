@@ -27,6 +27,7 @@ class SignUpPresenter {
             else { return }
             self?.view.showSuccessDialog()
             self?.store.saveUser(user)
+            
         }.catch { error in
             self.view.showSignUpError(message: error.localizedDescription)
         }

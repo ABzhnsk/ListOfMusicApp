@@ -28,8 +28,6 @@
 		B151C01B28A9280E0003F299 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B151C01A28A9280E0003F299 /* SignUpPresenter.swift */; };
 		B15248D328A64D0D004518BD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15248D228A64D0D004518BD /* String+Extension.swift */; };
 		B16E9FAE28ACE13F00A331C8 /* DataStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FAD28ACE13F00A331C8 /* DataStoreManager.swift */; };
-		B16E9FB528ACE41D00A331C8 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FB328ACE41D00A331C8 /* UserData+CoreDataClass.swift */; };
-		B16E9FB628ACE41D00A331C8 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FB428ACE41D00A331C8 /* UserData+CoreDataProperties.swift */; };
 		B16E9FB828ACE5F000A331C8 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FB728ACE5F000A331C8 /* UserDataModel.swift */; };
 		B16E9FBA28ACFB0800A331C8 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E9FB928ACFB0800A331C8 /* DateFormatter+.swift */; };
 		B1BCC82428A7FFCE0054E61A /* SignInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCC82328A7FFCE0054E61A /* SignInViewProtocol.swift */; };
@@ -39,6 +37,8 @@
 		B1BCC82C28A807450054E61A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1BCC82B28A807450054E61A /* GoogleService-Info.plist */; };
 		B1BF5DFB28A3F64C00F5D189 /* SettingsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF5DFA28A3F64C00F5D189 /* SettingsUI.swift */; };
 		B1BF5DFD28A402A800F5D189 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */; };
+		B1C392C928AD992A007AB7B1 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C392C728AD992A007AB7B1 /* UserData+CoreDataProperties.swift */; };
+		B1C392CA28AD992A007AB7B1 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C392C828AD992A007AB7B1 /* UserData+CoreDataClass.swift */; };
 		B1CBD6D728A6A3FE00A2EFF6 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CBD6D628A6A3FE00A2EFF6 /* UserAuth.swift */; };
 		B1F2552528AD7E1200D343B9 /* SongsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F2552428AD7E1200D343B9 /* SongsModel.swift */; };
 		DD0173646EE8F60E6BA115A0 /* Pods_ListOfMusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FBF070A1B836AB9A2E8275 /* Pods_ListOfMusicApp.framework */; };
@@ -70,8 +70,6 @@
 		B151C01A28A9280E0003F299 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		B15248D228A64D0D004518BD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B16E9FAD28ACE13F00A331C8 /* DataStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreManager.swift; sourceTree = "<group>"; };
-		B16E9FB328ACE41D00A331C8 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserData+CoreDataClass.swift"; path = "/Users/ABzhnsk/Desktop/Interview/Omega/ListOfMusicApp/ListOfMusicApp/ListOfMusicApp/Model/UserData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		B16E9FB428ACE41D00A331C8 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserData+CoreDataProperties.swift"; path = "/Users/ABzhnsk/Desktop/Interview/Omega/ListOfMusicApp/ListOfMusicApp/ListOfMusicApp/Model/UserData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		B16E9FB728ACE5F000A331C8 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		B16E9FB928ACFB0800A331C8 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		B1BCC82328A7FFCE0054E61A /* SignInViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewProtocol.swift; sourceTree = "<group>"; };
@@ -81,6 +79,8 @@
 		B1BCC82B28A807450054E61A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1BF5DFA28A3F64C00F5D189 /* SettingsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUI.swift; sourceTree = "<group>"; };
 		B1BF5DFC28A402A800F5D189 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B1C392C728AD992A007AB7B1 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B1C392C828AD992A007AB7B1 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B1CBD6D628A6A3FE00A2EFF6 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		B1F2552428AD7E1200D343B9 /* SongsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsModel.swift; sourceTree = "<group>"; };
 		CA9310609D07B9921A3EA9A1 /* Pods-ListOfMusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListOfMusicApp.debug.xcconfig"; path = "Target Support Files/Pods-ListOfMusicApp/Pods-ListOfMusicApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 		B16E9FBB28AD054600A331C8 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				B16E9FB328ACE41D00A331C8 /* UserData+CoreDataClass.swift */,
-				B16E9FB428ACE41D00A331C8 /* UserData+CoreDataProperties.swift */,
+				B1C392C828AD992A007AB7B1 /* UserData+CoreDataClass.swift */,
+				B1C392C728AD992A007AB7B1 /* UserData+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -415,8 +415,8 @@
 				B1BCC82828A8016A0054E61A /* AuthProtocol.swift in Sources */,
 				B137B88128AD071500813D49 /* NetworkRequest.swift in Sources */,
 				B1BF5DFD28A402A800F5D189 /* SignUpViewController.swift in Sources */,
-				B16E9FB628ACE41D00A331C8 /* UserData+CoreDataProperties.swift in Sources */,
 				B1BCC82428A7FFCE0054E61A /* SignInViewProtocol.swift in Sources */,
+				B1C392C928AD992A007AB7B1 /* UserData+CoreDataProperties.swift in Sources */,
 				B1BCC82A28A802730054E61A /* Authentication.swift in Sources */,
 				B144EE0A28ABA8A900D1602D /* UIImage+Extension.swift in Sources */,
 				B1BCC82628A800B60054E61A /* SignInPresenter.swift in Sources */,
@@ -436,8 +436,8 @@
 				B1F2552528AD7E1200D343B9 /* SongsModel.swift in Sources */,
 				B12D490628A3DE6200D66B51 /* ListOfMusicApp.xcdatamodeld in Sources */,
 				B1BF5DFB28A3F64C00F5D189 /* SettingsUI.swift in Sources */,
-				B16E9FB528ACE41D00A331C8 /* UserData+CoreDataClass.swift in Sources */,
 				B151C01B28A9280E0003F299 /* SignUpPresenter.swift in Sources */,
+				B1C392CA28AD992A007AB7B1 /* UserData+CoreDataClass.swift in Sources */,
 				B117FB6F28ABE0F800DF8D51 /* MusicListPresenter.swift in Sources */,
 				B12D48FE28A3DE6200D66B51 /* SceneDelegate.swift in Sources */,
 				B137B88328AD092100813D49 /* NetworkDataFetch.swift in Sources */,

@@ -398,7 +398,7 @@ extension SignUpViewController: SignUpViewProtocol {
         user.lastName = lastNameTextField.text
         user.age = datePicker.date
         user.phoneNumber = phoneNumberTextField.text
-        user.email = emailTextField.text
+        user.email = emailTextField.text?.lowercased()
         user.password = passwordTextField.text
         return user
     }
